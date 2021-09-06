@@ -1,4 +1,4 @@
-package com.example.dicee
+package com.example.magic_ball
 
 import io.flutter.embedding.android.FlutterActivity
 

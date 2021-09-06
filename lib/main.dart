@@ -11,56 +11,45 @@ void main() {
 
 class App extends StatefulWidget {
   @override
-  _App createState() => _App();
+  _AppState createState() => _AppState();
 }
 
-class _App extends State<App> {
-  int leftDice = 1;
-  int rightDice = 1;
-
-  void rollTheDice() {
-    setState(() {
-      leftDice = Random().nextInt(6) + 1;
-      rightDice = Random().nextInt(6) + 1;
-    });
-  }
+class _AppState extends State<App> {
+  bool isImage = false;
+  int magiBall = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrange,
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
-        title: Text(
-          'Its Your Turn',
-          style: TextStyle(color: Colors.white),
-        ),
-        centerTitle: true,
+        title: Text('Magic Ball'),
+        backgroundColor: Colors.blue,
       ),
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-              child: TextButton(
+      backgroundColor: Colors.blue,
+      body: Center(
+        child: isImage
+            ? TextButton(
                 onPressed: () {
-                  rollTheDice();
+                  setState(() {
+                    magiBall = Random().nextInt(5) + 1;
+                  });
                 },
-                child: Image.asset('images/dice$leftDice.png'),
-              ),
-            ),
-            Expanded(
-              child: TextButton(
+                child: Image.asset(
+                  'images/ball$magiBall.png',
+                ),
+              )
+            : ElevatedButton(
                 onPressed: () {
-                  rollTheDice();
+                  setState(() {
+                    magiBall = Random().nextInt(5) + 1;
+                    isImage = true;
+                  });
                 },
-                child: Image.asset('images/dice$rightDice.png'),
+                child: Text(
+                  'Press Here\n To Make a Decision',
+                  textAlign: TextAlign.center,
+                ),
               ),
-            )
-          ],
-        ),
       ),
     );
   }

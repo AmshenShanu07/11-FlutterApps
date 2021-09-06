@@ -1,6 +1,6 @@
 {
-    "name": "dicee",
-    "short_name": "dicee",
+    "name": "magic_ball",
+    "short_name": "magic_ball",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

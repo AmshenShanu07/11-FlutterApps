@@ -1,7 +1,6 @@
-name: dicee
+name: magic_ball
 description: A new Flutter project.
-
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none' 
 version: 1.0.0+1
 
 environment:
@@ -10,6 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
   flutter_launcher_icons: "^0.9.0"
 
 flutter_icons:
@@ -17,12 +23,9 @@ flutter_icons:
   android: true
   ios: true
 
-  cupertino_icons: ^1.0.2
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
 flutter:
   uses-material-design: true
+
   assets:
     - images/
