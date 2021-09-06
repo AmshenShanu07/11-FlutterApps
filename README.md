@@ -1,8 +1,4 @@
-# Bmi Calculator
-
-A intermediate flutter app which covers basic navigation and widget coustomization
-
-
+# clima
 
 A new Flutter project.
 
