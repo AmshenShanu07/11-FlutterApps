@@ -1,4 +1,4 @@
-package com.example.clima
+package com.example.bitcoin
 
 import io.flutter.embedding.android.FlutterActivity
 
