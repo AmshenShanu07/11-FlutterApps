@@ -1,8 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flash_chat">
-     <uses-permission android:name="android.permission.INTERNET" />
+    package="com.example.todoey">
    <application
-        android:label="FlashChat"
+        android:label="todoey"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

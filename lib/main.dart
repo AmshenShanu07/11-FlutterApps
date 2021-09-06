@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flash_chat/screens/welcome_screen.dart';
-import 'package:flash_chat/screens/login_screen.dart';
-import 'package:flash_chat/screens/registration_screen.dart';
-import 'package:flash_chat/screens/chat_screen.dart';
-import 'package:flash_chat/constants.dart';
+import 'package:provider/provider.dart';
+import 'package:todoey/model/TaskData.dart';
+import 'package:todoey/screens/TaskScreen.dart';
 
-void main() => runApp(FlashChat());
+void main() => runApp(MyApp());
 
-class FlashChat extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.light().copyWith(
-        textTheme: TextTheme(
-          bodyText2: TextStyle(color: Colors.black54),
+    return ChangeNotifierProvider<TaskData>(
+      create: (context) => TaskData(),
+      child: MaterialApp(
+        theme: ThemeData(
+          primaryTextTheme: TextTheme(
+            bodyText2: TextStyle(
+              color: Colors.white,
+            ),
+          ),
         ),
+        home: TaskScreen(),
       ),
-      initialRoute: kWelcomeScreen,
-      routes: {
-        kWelcomeScreen: (context) => WelcomeScreen(),
-        kLoginScreen: (context) => LoginScreen(),
-        kSignUpScreen: (context) => RegistrationScreen(),
-        kChatScreen: (context) => ChatScreen(),
-      },
     );
   }
 }
