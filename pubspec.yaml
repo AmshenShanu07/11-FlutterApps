@@ -1,8 +1,7 @@
-name: bitcoin
+name: flash_chat
 description: A new Flutter project.
 
 publish_to: 'none' 
-
 version: 1.0.0+1
 
 environment:
@@ -12,9 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   cupertino_icons: ^1.0.2
-  http: ^0.13.3
+  animated_text_kit: ^4.2.1
+  firebase_core: ^1.6.0
+  firebase_auth: ^3.1.0
+  cloud_firestore: ^2.5.1
+  flutter_progress_hud: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -22,9 +24,14 @@ dev_dependencies:
   flutter_launcher_icons: "^0.9.0"
 
 flutter_icons:
-  image_path: "icon/icon.png" 
+  image_path: "images/logo.png" 
   android: true
   ios: true
+
+
 flutter:
+
   uses-material-design: true
 
+  assets:
+    - images/
