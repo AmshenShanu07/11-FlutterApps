@@ -1,4 +1,8 @@
-# xylophone
+# Bmi Calculator
+
+A intermediate flutter app which covers basic navigation and widget coustomization
+
+
 
 A new Flutter project.
 

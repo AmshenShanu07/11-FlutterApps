@@ -1,7 +1,6 @@
-name: xylophone
+name: bmi
 description: A new Flutter project.
-
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -10,23 +9,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+ 
   cupertino_icons: ^1.0.2
-  audioplayers: ^0.19.1
+  font_awesome_flutter: ^9.1.0
 
 dev_dependencies:
   flutter_test:
-    sdk: flutter
+    sdk: flutter  
 
-# The following section is specific to Flutter.
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
-
-  assets:
-    - assets/
-
- 
