@@ -1,6 +1,6 @@
 {
-    "name": "todoey",
-    "short_name": "todoey",
+    "name": "instagram_login",
+    "short_name": "instagram_login",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
